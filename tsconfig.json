@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+     "typeRoots": ["./node_modules/@types"],
+     "moduleResolution": "node",
+     "baseUrl": ".",
+    "types": ["node"],
+    "skipLibCheck": true,
+      "target": "ES6",
+      "module": "CommonJS",
+      "esModuleInterop": true,
+      "outDir": "dist",
+      "rootDir": "src",
+      "strict": true,
+      "paths": {
+      "next-auth-package": ["./node_modules/next-auth-package"]
+    }
+      
+    },
+    "include": ["src/types/**/*.d.ts"]
+  }
+  

@@ -1,0 +1,34 @@
+{
+  "name": "next-auth-package",
+  "version": "1.0.3",
+  "main": "index.ts",
+"types": "src/types/next-auth-package.d.ts"
+,  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cookie": "^1.0.2",
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.11.0",
+    "next-auth": "^4.24.11",
+    "react-hot-toast": "^2.5.2",
+    "resend": "^4.1.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/cookie": "^1.0.0",
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.2"
+  },
+  "description": ""
+}
