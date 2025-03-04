@@ -2,16 +2,7 @@ import bcrypt from "bcryptjs";
 import dbConnect from "../config/db";
 import UserModel from "../models/User.model"
 import { sendVerificationEmail } from "../email/sendVerificationEmail";
-
-export const registerUser = async ({
-  firstName,
-  lastName,
-  userName,
-  email,
-  password,
-  domain,
-  EmailComponent
-}: {
+export const registerUser: (params: {
   firstName: string;
   lastName: string;
   userName: string;
@@ -19,9 +10,16 @@ export const registerUser = async ({
   password: string;
   domain: string;
   EmailComponent: React.ElementType;
+}) => Promise<{ success: boolean; message: string }> = async ({
+  firstName,
+  lastName,
+  userName,
+  email,
+  password,
+  domain,
+  EmailComponent,
 }) => {
   await dbConnect();
-
   if (await UserModel.findOne({ userName })) {
     return { success: false, message: "Username already taken" };
   }
